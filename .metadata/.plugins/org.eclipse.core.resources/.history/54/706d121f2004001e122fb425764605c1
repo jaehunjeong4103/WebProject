@@ -1,0 +1,19 @@
+package entity;
+
+import java.util.Date;
+
+public class Reservation {
+	private int id;
+	private int group_id;
+	private String member_id;
+	private String member_phone;
+	private Date reservation_date;
+	private int reservation_person;
+	private int price;
+	
+	public Reservation() {
+	}
+
+	
+	
+}

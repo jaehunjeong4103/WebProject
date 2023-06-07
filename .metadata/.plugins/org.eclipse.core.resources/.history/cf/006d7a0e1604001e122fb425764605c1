@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;}
+
+div#reservation {
+	width: 824px;
+  margin: auto;
+  border: 1px solid yellow;
+  margin-top: 10px;
+}
+
+div#date_count {
+	width: 784px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+}
+
+#start_day {
+	margin-right: 20px;
+}
+
+#end_day {
+	margin-right: 200px;
+}
+
+
+
+
+
+div#date {
+	width: 600px;
+}
+
+#room_box {
+	width: 784px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid rgb(128, 0, 255);
+	display: flex;
+	flex-direction: column;
+}
+
+#room_list_head{
+	width: 784px;
+	height: 40px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+#room_list{
+	width: 784px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#room_list_head div {
+	font-size: 20px;
+	text-align: center;
+	line-height: 40px;
+	border: 1px solid gray;	
+}
+
+#room_list div {
+	padding: 5px;
+	font-size: 15px;
+	border: 1px solid gray;
+}
+
+.room_name {
+	width: 120px;
+}
+.room_max {
+	width: 100px;
+}
+.room_price {
+	width: 120px;
+}
+.room_facilities {
+	width: 360px;
+}
+.room_reservation {
+	width: 84px;
+}
+
+a.reserbation {
+	color: black;
+}
+
+#room_list .room_name {
+	text-align: center;
+}
+
+#room_list .room_max {
+	text-align: center;
+}
+
+#room_list .room_reservation {
+	text-align: center;
+}
+
+#reservation_body {
+	width: 500px;
+	margin: auto;
+	position: relative;
+}
+
+#reservation_body span {
+	width: 120px;
+	font-size: 20px;
+	padding-left: 10px;
+	line-height: 62px;
+}
+
+.input {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}

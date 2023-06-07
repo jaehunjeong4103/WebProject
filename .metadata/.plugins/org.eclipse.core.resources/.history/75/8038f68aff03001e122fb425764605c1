@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Song+Myung&display=swap" rel="stylesheet">
+	<link href="../../css/reservation.css?after" type="text/css" rel="stylesheet" />
+	<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="reservation_body">
+		
+	</div>	
+</body>
+</html>

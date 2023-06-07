@@ -1,0 +1,5 @@
+package controller.stay;
+
+public class Room_detail_controller {
+
+}

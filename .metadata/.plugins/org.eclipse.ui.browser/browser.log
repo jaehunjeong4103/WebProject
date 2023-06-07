@@ -1,0 +1,11 @@
+
+6월 06, 2023 15:30:21.940 NEW SESSION
+6월 06, 2023 15:30:21.940 [25920:30400:0606/153021.926:ERROR:chrome_browser_cloud_management_controller.cc(162)] Cloud management controller initialization aborted as CBCM is not enabled.
+6월 06, 2023 15:30:23.61 [25920:24608:0606/153023.061:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+6월 06, 2023 15:30:23.73 ERROR: Couldn't read tbsCertificate as SEQUENCE
+6월 06, 2023 15:30:23.82 ERROR: Failed parsing Certificate
+6월 06, 2023 15:30:23.95 
+6월 06, 2023 15:30:23.233 [25920:24592:0606/153023.232:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+6월 06, 2023 15:30:23.243 ERROR: Couldn't read tbsCertificate as SEQUENCE
+6월 06, 2023 15:30:23.252 ERROR: Failed parsing Certificate
+6월 06, 2023 15:30:23.264 

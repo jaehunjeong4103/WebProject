@@ -1,0 +1,5 @@
+package controller.stay;
+
+public class Stay_detail_controller {
+
+}

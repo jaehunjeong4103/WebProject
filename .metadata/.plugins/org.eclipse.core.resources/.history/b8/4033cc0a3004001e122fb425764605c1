@@ -1,0 +1,8 @@
+package filter;
+
+import javax.servlet.Filter;
+
+@WebFilter("/*")
+public class Character_encoding_filter implements Filter{
+
+}

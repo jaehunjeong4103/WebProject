@@ -1,0 +1,52 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Song+Myung&display=swap" rel="stylesheet">
+	<link href="../../css/register.css?after" type="text/css" rel="stylesheet" />
+	<link href="../../css/reservation.css?after" type="text/css" rel="stylesheet" />
+	<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<div id="arrow_body">
+			<button onclick="history.back()"><image src="../../images/direction-arrow.png" alt="화살표" id="arrow"/></button>
+		<div id="title">예약하기</div>
+	</header>		
+	<div id="reservation_body">
+		<form action="reservation" method="post">
+			<section>
+				<div class="input">
+					<span>숙소 이름</span>
+					<input type="text" placeholder="자동입력 운주산 자연 휴양림" class="input_text id" name="ID" value="${stay_name}" readonly>
+				</div>
+				<div class="input">
+					<span>방 이름</span>
+					<input type="text" placeholder="자동입력 숲속의 집 1호" class="input_text id" name="ID" value="${chkId}" readonly>
+				</div>
+				<div class="input">
+					<span>예약자명</span>
+					<input type="text" placeholder="예약자명" class="input_text id" name="ID" value="${chkId}" readonly>
+				</div>
+				<div class="input">
+					<span>인원수</span>
+					<input type="text" placeholder="6명" class="input_text id" name="ID" value="${chkId}" readonly>
+				</div>				
+				<div class="input">
+					<span>예약날짜</span>
+					<input type="text" placeholder="자동입력 23.06.06 ~ 23.06.09 3박 4일" class="input_text id" name="ID" value="${chkId}" readonly>
+				</div>				
+				<div class="input">
+					<span>금액</span>
+					<input type="text" placeholder="자동입력 240,000원" class="input_text id" name="ID" value="${chkId}" readonly>
+				</div>
+		    <input type="submit" value="예약하기" class="button">
+			</section>
+		</form>
+	</div>	
+</body>
+</html>

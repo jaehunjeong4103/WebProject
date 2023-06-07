@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Song+Myung&display=swap" rel="stylesheet">
+	<link href="../../css/register.css?after" type="text/css" rel="stylesheet" />
+	<link href="../../css/reservation.css?after" type="text/css" rel="stylesheet" />
+	<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<div id="arrow_body">
+			<button onclick="history.back()"><image src="../../images/direction-arrow.png" alt="화살표" id="arrow"/></button>
+		<div id="title">예약하기</div>
+	</header>		
+	<div id="reservation_body">
+		<form action="register" method="post">
+			<section>
+				<input type="text" placeholder="아이디를 입력해주세요" class="input_text id" name="ID" value="${chkId}">
+    			<a href="duplicate" id="id_check"> 아이디 중복체크</a>
+			  </input>
+				<input type="text" placeholder="비밀번호를 입력해주세요" class="input_text password" name="PASSWORD">
+			  <input type="text" placeholder="이름을 입력해주세요" class="input_text name" name="NAME">
+				<input type="text" placeholder="전화번호를 입력해주세요" class="input_text phone" name="PHONE">
+				<input type="text" placeholder="이메일을 입력해주세요" class="input_text email" name="EMAIL">
+			  	<input style="scale:2" type="radio" name="GENDER" id="male" value="male" checked="checked">
+			    	<label for="male">남자</label>
+			    <input style="scale:2" type="radio" name="GENDER" id="female" value="female">
+			    	<label for="female">여자</label>
+		    	<input type="submit" value="회원가입" id="register_button" class="button">
+			</section>
+		</form>
+	</div>	
+</body>
+</html>

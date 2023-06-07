@@ -1,0 +1,89 @@
+@charset "UTF-8";
+* {padding: 0; margin: 0;}
+
+button {border-width: 0;}
+
+body {
+	width: 500px;
+	margin: auto;
+}
+
+a#id_check {
+	position: absolute;
+}
+
+img#arrow {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	transform: rotate(180deg);
+}
+
+div#title {
+	font-size: 50px; 
+	text-align: center; 
+	line-height: 150px;
+}
+
+#section {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+label {
+	width: 50%;
+	font-size: 30px;
+	line-height: 50px;
+	text-align: center;
+	color: gray;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+input#male{
+	margin-left: 20px;
+}
+
+input#male, input#female {
+	position: relative;
+	top: -4.5px;
+}
+
+.input_text {
+	width: 100%; 
+	font-size: 20px; 
+	line-height: 50px; 
+	border-radius: 5px;
+	padding-left: 10px; 
+	box-sizing: border-box;
+	margin: 5px;
+}
+
+.button {
+	width: 100%;
+	margin: auto;
+	margin-top: 10px;
+	background-color: rgb(169, 89, 245);
+	border-radius: 10px;
+	text-align: center;   
+	font-size: 35px;
+	color: azure;
+	line-height: 50px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+    
+#register_button:disabled input type:submit{
+	background-color: gray;
+}
+
+button:hover {cursor: pointer;}
+    
+.button:hover {cursor: pointer;}
+.button:disabled {background-color: gray; color: white;}
+
+a {
+	color: black; text-decoration-line: none;
+}

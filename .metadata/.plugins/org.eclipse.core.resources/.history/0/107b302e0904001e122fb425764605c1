@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Song+Myung&display=swap" rel="stylesheet">
+	<link href="../../css/register.css?after" type="text/css" rel="stylesheet" />
+	<link href="../../css/reservation.css?after" type="text/css" rel="stylesheet" />
+	<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<div id="arrow_body">
+			<button onclick="history.back()"><image src="../../images/direction-arrow.png" alt="화살표" id="arrow"/></button>
+		<div id="title">예약하기</div>
+	</header>		
+	<div id="reservation_body">
+		<form action="reservation" method="post">
+			<section>
+				<div class="input">
+					<span>예약자명</span>
+					<input type="text" placeholder="예약자명" class="input_text id" name="ID" value="${chkId}" readonly>
+				</div>
+				
+				<input type="text" placeholder="비밀번호를 입력해주세요" class="input_text password" name="PASSWORD" readonly>
+			  <input type="text" placeholder="이름을 입력해주세요" class="input_text name" name="NAME" readonly>
+				<input type="text" placeholder="전화번호를 입력해주세요" class="input_text phone" name="PHONE" readonly>
+				<input type="text" placeholder="이메일을 입력해주세요" class="input_text email" name="EMAIL" readonly>
+		    <input type="submit" value="예약하기" class="button">
+			</section>
+		</form>
+	</div>	
+</body>
+</html>

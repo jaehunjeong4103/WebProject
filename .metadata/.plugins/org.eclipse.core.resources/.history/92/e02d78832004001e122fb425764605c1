@@ -1,0 +1,94 @@
+package entity;
+
+import java.util.Date;
+
+public class Reservation {
+	private int id;
+	private int group_id;
+	private int room_name;
+	private String member_name;
+	private Date reservation_date;
+	private int reservation_person;
+	private int price;
+	
+	public Reservation() {
+	}
+
+	public Reservation(int id, int group_id, int room_name, String member_name, Date reservation_date,
+			int reservation_person, int price) {
+		super();
+		this.id = id;
+		this.group_id = group_id;
+		this.room_name = room_name;
+		this.member_name = member_name;
+		this.reservation_date = reservation_date;
+		this.reservation_person = reservation_person;
+		this.price = price;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getGroup_id() {
+		return group_id;
+	}
+
+	public void setGroup_id(int group_id) {
+		this.group_id = group_id;
+	}
+
+	public int getRoom_name() {
+		return room_name;
+	}
+
+	public void setRoom_name(int room_name) {
+		this.room_name = room_name;
+	}
+
+	public String getMember_name() {
+		return member_name;
+	}
+
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
+	}
+
+	public Date getReservation_date() {
+		return reservation_date;
+	}
+
+	public void setReservation_date(Date reservation_date) {
+		this.reservation_date = reservation_date;
+	}
+
+	public int getReservation_person() {
+		return reservation_person;
+	}
+
+	public void setReservation_person(int reservation_person) {
+		this.reservation_person = reservation_person;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "Reservation [id=" + id + ", group_id=" + group_id + ", room_name=" + room_name + ", member_name="
+				+ member_name + ", reservation_date=" + reservation_date + ", reservation_person=" + reservation_person
+				+ ", price=" + price + "]";
+	}
+
+	
+	
+}

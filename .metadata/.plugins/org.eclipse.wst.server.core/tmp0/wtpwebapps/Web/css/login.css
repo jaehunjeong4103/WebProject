@@ -1,0 +1,26 @@
+@charset "UTF-8";  
+
+section {
+	width: 100%; 
+	margin: auto;
+}
+
+label.save {font-size: 20px;}
+
+input#save_id {margin-right: 10px;}
+
+div#search {
+	display: flex; 
+	flex-direction: row; 
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+div.find{
+	padding-left: 10px; 
+	padding-right: 10px;
+}
+
+div.search_id, div.search_password {
+	border-right: 1px solid gray;
+}  
