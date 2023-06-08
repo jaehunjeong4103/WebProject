@@ -19,11 +19,20 @@ div#date_count {
 }
 
 #start_day {
-	margin-right: 20px;
+	width: 390px;
 }
 
 #end_day {
-	margin-right: 345px;
+	width: 340px;
+}
+
+.left {
+	border-right: 1px solid rgb(128, 0, 255);
+}
+
+.choose_day {
+	border: 0;
+	font-size: 20px;
 }
 
 div#date {

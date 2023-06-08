@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
@@ -67,61 +67,32 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div id ="reservation">		
 	  	<div id="date_count">
 	  		<div id="start_day">
-	  			입실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${now_day <10}">0</c:if>${now_day}
+	  			<span>입실일 : </span>
+	  			<input type="text" name="start_day" class="choose_day" placeholder="입실일을 선택해주세요" onclick="view_start_cal()">	 
 	  		</div>
-	  		<div id="end_day">
-	  			퇴실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${now_day <10}">0</c:if>${now_day}
+	  		
+	  		<div id="end_day" name="end_day">
+	  			<span>퇴실일 : </span>
+	  			<input type="text" name="end_day" class="choose_day" placeholder="퇴실일을 선택해주세요" onclick="view_end_cal()">
 	  		</div>
 	  		<!-- <div id="end_day">3박 4일</div> -->
 	  		
 	  		<input type="submit" style="width: 50px; height: 28px; font-size: 18px; line-height: 28px;" value="검색">
 	  	</div>
 	  	
-	  	<div id="calendar">
-	  		<section class="calendar left">
-					<table>
+	  	<div id="calendar">	
+	  		<!-- 
+	  		<div id="start_cal">
+	  			<table>
 						<tr>
 							<td>
 								<a href="stay_detail?id=${stay_id}&c_year=${pre_year}&c_month=${pre_month}">◀</a>
 							</td>
-							<td colspan="6">${year}년<c:if test="${month <10}">0</c:if>${month}월</td>
-						</tr>
-						<tr>
-							<td>일</td>
-							<td>월</td>
-							<td>화</td>
-							<td>수</td>
-							<td>목</td>
-							<td>금</td>
-							<td>토</td>
-						</tr>
-						<tr>
-							<c:forEach var="list" items="${calendar_list}" varStatus="status">
-								<c:choose>
-									<c:when test="${status.index%7==6}">
-											<td class="sat"><button>${list.day}</button></td>
-									</c:when>
-									<c:when test="${status.index%7==0}">
-						</tr>
-						<tr>
-										<td class="sun"><button type="button" onclick="alert('버튼 클릭')">${list.day}</button></td>
-									</c:when>
-									<c:otherwise>
-										<td class="weekday"><button>${list.day}</button></td>
-									</c:otherwise>
-								</c:choose>						
-							</c:forEach>
-						</tr>
-					</table>
-				</section>
-				<section class="calendar right">
-					<table>
-						<tr>
-							<td colspan="6">${next_year}년<c:if test="${next_month <10}">0</c:if>${next_month}월</td>
+							<td colspan="5">${year}년<c:if test="${month <10}">0</c:if>${month}월</td>
 							<td>
 								<a href="stay_detail?id=${stay_id}&c_year=${next_year}&c_month=${next_month}">▶</a>
 							</td>
@@ -136,26 +107,174 @@
 							<td>토</td>
 						</tr>
 						<tr>
-							<c:forEach var="list" items="${next_calendar_list}" varStatus="status">
+							<c:forEach var="list" items="${calendar_list}" varStatus="status">
 								<c:choose>
 									<c:when test="${status.index%7==6}">
-										<td class="sat"><button type="button" onclick="alert('버튼 클릭')">${list.day}</button></td>
+											<td class="sat">
+												<button onclick="start_day.textContent='입실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+											</td>
 									</c:when>
 									<c:when test="${status.index%7==0}">
 						</tr>
 						<tr>
-										<td class="sun"><button type="button" onclick="alert('버튼 클릭')">${list.day}</button></td>
+										<td class="sun">
+											<button onclick="start_day.textContent='입실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
 									</c:when>
 									<c:otherwise>
-										<td class="weekday"><button type="button" onclick="alert('버튼 클릭')">${list.day}</button></td>
+										<td class="weekday">
+											<button onclick="start_day.textContent='입실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
 									</c:otherwise>
 								</c:choose>						
 							</c:forEach>
 						</tr>
-					</table>  		
+					</table>
+	  		</div>
+	  		
+	  		<div id="end_cal">
+	  			<table>
+						<tr>
+							<td>
+								<a href="stay_detail?id=${stay_id}&c_year=${pre_year}&c_month=${pre_month}">◀</a>
+							</td>
+							<td colspan="5">${year}년<c:if test="${month <10}">0</c:if>${month}월</td>
+							<td>
+								<a href="stay_detail?id=${stay_id}&c_year=${next_year}&c_month=${next_month}">▶</a>
+							</td>
+						</tr>
+						<tr>
+							<td>일</td>
+							<td>월</td>
+							<td>화</td>
+							<td>수</td>
+							<td>목</td>
+							<td>금</td>
+							<td>토</td>
+						</tr>
+						<tr>
+							<c:forEach var="list" items="${calendar_list}" varStatus="status">
+								<c:choose>
+									<c:when test="${status.index%7==6}">
+											<td class="sat">
+												<button onclick="end_day.textContent='퇴실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+											</td>
+									</c:when>
+									<c:when test="${status.index%7==0}">
+						</tr>
+						<tr>
+										<td class="sun">
+											<button onclick="end_day.textContent='퇴실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
+									</c:when>
+									<c:otherwise>
+										<td class="weekday">
+											<button onclick="end_day.textContent='퇴실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
+									</c:otherwise>
+								</c:choose>						
+							</c:forEach>
+						</tr>
+					</table>
+	  		</div>
+	  		 -->
+	  		 
+	  		<section class="calendar left">
+					<table>
+						<tr>
+							<td>
+								<a href="stay_detail?id=${stay_id}&c_year=${pre_year}&c_month=${pre_month}">◀</a>
+							</td>
+							<td colspan="5">${year}년<c:if test="${month <10}">0</c:if>${month}월</td>
+							<td>
+								<a href="stay_detail?id=${stay_id}&c_year=${next_year}&c_month=${next_month}">▶</a>
+							</td>
+						</tr>
+						<tr>
+							<td>일</td>
+							<td>월</td>
+							<td>화</td>
+							<td>수</td>
+							<td>목</td>
+							<td>금</td>
+							<td>토</td>
+						</tr>
+						<tr>
+							<c:forEach var="list" items="${calendar_list}" varStatus="status">
+								<c:choose>
+									<c:when test="${status.index%7==6}">
+											<td class="sat">
+												<button onclick="start_day.textContent='입실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+											</td>
+									</c:when>
+									<c:when test="${status.index%7==0}">
+						</tr>
+						<tr>
+										<td class="sun">
+											<button onclick="start_day.textContent='입실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
+									</c:when>
+									<c:otherwise>
+										<td class="weekday">
+											<button onclick="start_day.textContent='입실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
+									</c:otherwise>
+								</c:choose>						
+							</c:forEach>
+						</tr>
+					</table>
 				</section>
+				 
+				<section class="calendar right">
+					<table>
+						<tr>
+							<td>
+								<a href="stay_detail?id=${stay_id}&c_year=${pre_year}&c_month=${pre_month}">◀</a>
+							</td>
+							<td colspan="5">${year}년<c:if test="${month <10}">0</c:if>${month}월</td>
+							<td>
+								<a href="stay_detail?id=${stay_id}&c_year=${next_year}&c_month=${next_month}">▶</a>
+							</td>
+						</tr>
+						<tr>
+							<td>일</td>
+							<td>월</td>
+							<td>화</td>
+							<td>수</td>
+							<td>목</td>
+							<td>금</td>
+							<td>토</td>
+						</tr>
+						<tr>
+							<c:forEach var="list" items="${calendar_list}" varStatus="status">
+								<c:choose>
+									<c:when test="${status.index%7==6}">
+											<td class="sat">
+												<button onclick="end_day.textContent='퇴실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+											</td>
+									</c:when>
+									<c:when test="${status.index%7==0}">
+						</tr>
+						<tr>
+										<td class="sun">
+											<button onclick="end_day.textContent='퇴실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
+									</c:when>
+									<c:otherwise>
+										<td class="weekday">
+											<button onclick="end_day.textContent='퇴실일 : ${year}-<c:if test="${month <10}">0</c:if>${month}-<c:if test="${list.day <10}">0</c:if>${list.day}'">${list.day}</button>
+										</td>
+									</c:otherwise>
+								</c:choose>						
+							</c:forEach>
+						</tr>
+					</table>
+				</section>
+
+				 
 	  	</div>
 	  </div>
+	  
 	  <div id="room_box">
 	  	<div id="room_list_head">
 				<div class="room_name">이름</div>

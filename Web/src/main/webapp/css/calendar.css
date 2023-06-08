@@ -4,7 +4,8 @@ div#calendar {
 	width: 785px;
 	margin: auto;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	position: relative;
 	overflow: hiden;	
 }
@@ -27,15 +28,16 @@ div#start_cal {
 	height: 0px;
 	overflow: hidden;
 }
+
 div#end_cal {
 	width: 392px;
 	height: 0px;
 	overflow: hidden;
 }
-/*
+
 section.calendar {
 	width: 392px;
 }
-*/
-.sat {color: blue;}
-.sun {color: red;}
+
+.sat button {color: blue;}
+.sun button {color: red;}

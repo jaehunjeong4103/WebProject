@@ -1,0 +1,43 @@
+@charset "EUC-KR";
+
+div#calendar {
+	width: 785px;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	position: relative;
+	overflow: hiden;	
+}
+
+div#calendar td {
+	width: 56px;
+	height: 40px;
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid red;
+}
+
+button {
+	font-size: 20px;
+	background-color:transparent;
+}
+
+div#start_cal {
+	width: 392px;
+	height: 0px;
+	overflow: hidden;
+}
+
+div#end_cal {
+	width: 392px;
+	height: 0px;
+	overflow: hidden;
+}
+
+section.calendar {
+	width: 392px;
+}
+
+.sat button {color: blue;}
+.sun  button {color: red;}

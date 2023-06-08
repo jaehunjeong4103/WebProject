@@ -12,22 +12,28 @@ div#reservation {
 div#date_count {
 	width: 784px;
 	margin: auto;
+	margin-bottom: 5px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 	font-size: 20px;
 }
 
-div#date {
-	width: 600px;
+#start_day {
+	width: 395px;
+	border: 1px solid red;
 }
 
-div#count {
-	width: 200px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 10px;
+#end_day {
+	width: 300px;
+}
+
+.left {
+	border-right: 1px solid rgb(128, 0, 255);
+}
+
+
+div#date {
+	width: 600px;
 }
 
 #room_box {
@@ -52,7 +58,6 @@ div#count {
 
 #room_list{
 	width: 784px;
-	height: 40px;
 	margin: auto;
 	display: flex;
 	flex-direction: row;
@@ -68,23 +73,22 @@ div#count {
 }
 
 #room_list div {
+	padding: 5px;
 	font-size: 15px;
-	text-align: center;
-	line-height: 40px;
 	border: 1px solid gray;
 }
 
 .room_name {
-	width: 100px;
+	width: 120px;
 }
 .room_max {
 	width: 100px;
 }
 .room_price {
-	width: 100px;
+	width: 120px;
 }
 .room_facilities {
-	width: 400px;
+	width: 360px;
 }
 .room_reservation {
 	width: 84px;
@@ -94,8 +98,41 @@ a.reserbation {
 	color: black;
 }
 
+#room_list .room_name {
+	text-align: center;
+}
 
+#room_list .room_max {
+	text-align: center;
+}
 
+#room_list .room_reservation {
+	text-align: center;
+}
 
+#reservation_body {
+	width: 500px;
+	margin: auto;
+	position: relative;
+}
 
+#reservation_body span {
+	width: 120px;
+	font-size: 20px;
+	padding-left: 10px;
+	line-height: 62px;
+}
 
+.input {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+#res_button {
+	border: none;
+	background-color:transparent;
+	font-size: 15px;
+}
+#res_button:hover {cursor: pointer;}
