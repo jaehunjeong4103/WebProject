@@ -4,9 +4,9 @@ div#calendar {
 	width: 785px;
 	margin: auto;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-direction: column;
 	position: relative;
+	overflow: hiden;	
 }
 
 div#calendar td {
@@ -22,15 +22,20 @@ button {
 	background-color:transparent;
 }
 
-
+div#start_cal {
+	width: 392px;
+	height: 0px;
+	overflow: hidden;
+}
+div#end_cal {
+	width: 392px;
+	height: 0px;
+	overflow: hidden;
+}
+/*
 section.calendar {
 	width: 392px;
 }
-
-section.left {
-	border-right: 1px solid #8000ff;
-}
-
-
+*/
 .sat {color: blue;}
 .sun {color: red;}
