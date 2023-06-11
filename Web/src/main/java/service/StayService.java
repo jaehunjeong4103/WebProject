@@ -143,6 +143,52 @@ public class StayService {
 				
 		return stay;
 	}
+	
+	public Stay getStay(String stay_name) {
+		Stay stay = null;
+		
+		String driverName="com.mysql.cj.jdbc.Driver";
+		String sql = "SELECT * FROM stay WHERE NAME = ?";
+		String url = "jdbc:mysql://localhost:3306/yc";
+		try {
+			Class.forName(driverName);
+			Connection conn = DriverManager.getConnection(url, "root", "1111");
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, stay_name) ;
+			
+			ResultSet rs = pstmt.executeQuery();
+	
+			if (rs.next()){
+				int sid = rs.getInt("id");
+				int group_id = rs.getInt("group_id");
+				String name = rs.getString("name");
+				String address = rs.getString("address");
+				String phone = rs.getString("phone");
+				String check_in = rs.getString("check_in");
+				String map_path = rs.getString("map_path");
+				String image_path = rs.getString("image_path");
+						
+			    stay = new Stay(
+						sid,
+						group_id,
+						name,
+						address,
+						phone,
+						check_in,
+						map_path,
+						image_path
+						);
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		return stay;
+	}
 
 	public int insertStay(Stay stay) {
 		int result = 0;
@@ -175,5 +221,7 @@ public class StayService {
 		
 		return result;
 	}
+
+	
 
 }

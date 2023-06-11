@@ -39,14 +39,6 @@ public class Stay_detail_controller extends HttpServlet{
 		session.setAttribute("group_id", group_id);
 		session.setAttribute("stay_id", id);
 		
-		ReviewService review_service = new ReviewService();
-		List<Review> review_list = review_service.getReviewList(code, group_id);
-		
-		RoomService room_service = new RoomService();
-		List<Room> room_list = room_service.getRoomList(id, name);
-		request.setAttribute("room_list", room_list);
-		
-		
 		Calendar cal = Calendar.getInstance();
 		Calendar next_cal = Calendar.getInstance();
 		int now_year = cal.get(Calendar.YEAR);
@@ -145,7 +137,32 @@ public class Stay_detail_controller extends HttpServlet{
 		request.setAttribute("calendar_list", calendar_list);
 		request.setAttribute("next_calendar_list", next_calendar_list);
 		
+		String stay_name_ = request.getParameter("stay_name");
+		String s_day_ = request.getParameter("s_day");
+		String e_day_ = request.getParameter("e_day");
+		
+		String stay_name = "name";
+		if(stay_name_ != null && !stay_name_.equals("")) {
+			stay_name = stay_name_;
+		}
+		String s_day = "0";
+		if(s_day_ != null && !s_day_.equals("")) {
+			s_day = s_day_;
+		}
+		String e_day = "0";
+		if(e_day_ != null && !e_day_.equals("")) {
+			e_day = e_day_;
+		}
+		
+		RoomService room_service = new RoomService();
+		List<Room> room_list = room_service.getRoomList(id, name);
+		request.setAttribute("room_list", room_list);
+		
+		ReviewService review_service = new ReviewService();
+		List<Review> review_list = review_service.getReviewList(code, group_id);	
 		request.setAttribute("review_list", review_list);
+		
 		request.getRequestDispatcher("/WEB-INF/view/stay/stay_detail.jsp").forward(request, response);
 	}
+	
 }

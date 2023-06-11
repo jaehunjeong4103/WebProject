@@ -1,9 +1,0 @@
-package controller.reservation;
-
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-
-@WebServlet("/view/reservation/reservation")
-public class Reservation_controller extends HttpServlet{
-
-}

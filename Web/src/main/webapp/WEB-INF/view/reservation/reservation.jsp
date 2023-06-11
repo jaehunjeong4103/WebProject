@@ -37,12 +37,16 @@
 					<input type="text" placeholder="인원수를 입력해주세요" class="input_text id" name="count">
 				</div>				
 				<div class="input">
-					<span>예약날짜</span>
-					<input type="text" class="input_text id" name="res_date" value="${res_date}" readonly>
+					<span>입실일</span>
+					<input type="text" class="input_text id" name="check_in" value="${check_in}" readonly>
 				</div>				
 				<div class="input">
+					<span>퇴실일</span>
+					<input type="text" class="input_text id" name="check_out" value="${check_out}" readonly>
+				</div>
+				<div class="input">
 					<span>금액</span>
-					<input type="text" class="input_text id" name="price" value="240000" readonly>
+					<input type="text" class="input_text id" name="price" value="${price}" readonly>
 				</div>
 				<input type="hidden" value="${logIn_id}" name="member_id">
 		    <input type="submit" value="예약하기" class="button">

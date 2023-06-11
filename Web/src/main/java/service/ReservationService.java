@@ -13,7 +13,7 @@ public class ReservationService {
 		int result = 0;
 		
 		String driverName="com.mysql.cj.jdbc.Driver";
-		String sql = "INSERT INTO reservation VALUES(null, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO reservation VALUES(null, ?, ?, ?, ?, ?, ?, ?)";
 		String url = "jdbc:mysql://localhost:3306/yc";
 		
 		try {
@@ -23,9 +23,10 @@ public class ReservationService {
 			pstmt.setString(1, reservation.getMember_id());
 			pstmt.setString(2, reservation.getStay_name());
 			pstmt.setString(3, reservation.getRoom_name());
-			pstmt.setString(4, reservation.getReservation_date());
-			pstmt.setInt(5, reservation.getReservation_person());
-			pstmt.setInt(6, reservation.getPrice());
+			pstmt.setDate(4, reservation.getCheck_in());
+			pstmt.setDate(5, reservation.getCheck_out());
+			pstmt.setInt(6, reservation.getReservation_person());
+			pstmt.setInt(7, reservation.getPrice());
 			
 			result = pstmt.executeUpdate();
 
