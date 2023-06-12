@@ -1,10 +1,10 @@
 let start = document.getElementById('s_d');
 let end = document.getElementById('e_d');
 let cal_button = document.querySelectorAll('.cal_button');
-let weekend_count = document.getElementById('weekend_count');
-let weekday_count = document.getElementById('weekday_count');
-let check_in = document.getElementById('check_in');
-let check_out = document.getElementById('check_out');
+let weekend_count = Array.from(document.querySelectorAll('.weekend_count'));
+let weekday_count = Array.from(document.querySelectorAll('.weekday_count'));
+let check_in = Array.from(document.querySelectorAll('.check_in'));
+let check_out = Array.from(document.querySelectorAll('.check_out'));
 	
 cal_button.forEach(function(button) {
 	button.addEventListener('click', select_cal);
@@ -24,7 +24,9 @@ function select_cal(){
 										
 	if (start.value == null || start.value == "") {
 		start.value = year+"-"+month+"-"+day;
-		check_in.value = year+"-"+month+"-"+day;
+		check_in.forEach(function(element) {
+      element.value = year + "-" + month + "-" + day;
+    });
 	} else {
 		
 		let start_date = new Date(start.value);
@@ -33,7 +35,9 @@ function select_cal(){
 			return;
 		} else{
 			end.value = year+"-"+month+"-"+day;
-			check_out.value = year+"-"+month+"-"+day;
+			check_out.forEach(function(element) {
+        element.value = year + "-" + month + "-" + day;
+      });
 		}		
 	}						
 					
@@ -59,6 +63,10 @@ function select_cal(){
 			console.log("Number of weekends:", weekends);
 			
 	}
-			weekend_count.value = weekends;
-			weekday_count.value = weekdays;		
+	weekend_count.forEach(function(element) {
+   	element.value = weekends;
+  });
+  weekday_count.forEach(function(element) {
+	   element.value = weekdays;
+  });
 }

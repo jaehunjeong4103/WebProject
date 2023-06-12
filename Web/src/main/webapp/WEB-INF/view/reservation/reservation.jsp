@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,42 +14,42 @@
 <body>
 	<header>
 		<div id="arrow_body">
-			<button onclick="history.back()"><image src="../../images/direction-arrow.png" alt="È­»ìÇ¥" id="arrow"/></button>
-		<div id="title">¿¹¾àÇÏ±â</div>
+			<button onclick="history.back()"><image src="../../images/direction-arrow.png" alt="í™”ì‚´í‘œ" id="arrow"/></button>
+		<div id="title">ì˜ˆì•½í•˜ê¸°</div>
 	</header>		
 	<div id="reservation_body">
 		<form action="reservation" method="post">
 			<section>
 				<div class="input">
-					<span>¼÷¼Ò ÀÌ¸§</span>
+					<span>ìˆ™ì†Œ ì´ë¦„</span>
 					<input type="text" class="input_text id" name="stay_name" value="${stay_name}" readonly>
 				</div>
 				<div class="input">
-					<span>¹æ ÀÌ¸§</span>
+					<span>ë°© ì´ë¦„</span>
 					<input type="text" class="input_text id" name="room_name" value="${room_name}" readonly>
 				</div>
 				<div class="input">
-					<span>¿¹¾àÀÚ¸í</span>
-					<input type="text" placeholder="¿¹¾àÀÚ¸íÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä" class="input_text id" name="member_name">
+					<span>ì˜ˆì•½ìžëª…</span>
+					<input type="text" placeholder="ì˜ˆì•½ìžëª…ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”" class="input_text id" name="member_name">
 				</div>
 				<div class="input">
-					<span>ÀÎ¿ø¼ö</span>
-					<input type="text" placeholder="ÀÎ¿ø¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä" class="input_text id" name="count">
+					<span>ì¸ì›ìˆ˜</span>
+					<input type="text" placeholder="ì¸ì›ìˆ˜ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”" class="input_text id" name="count">
 				</div>				
 				<div class="input">
-					<span>ÀÔ½ÇÀÏ</span>
+					<span>ìž…ì‹¤ì¼</span>
 					<input type="text" class="input_text id" name="check_in" value="${check_in}" readonly>
 				</div>				
 				<div class="input">
-					<span>Åð½ÇÀÏ</span>
+					<span>í‡´ì‹¤ì¼</span>
 					<input type="text" class="input_text id" name="check_out" value="${check_out}" readonly>
 				</div>
 				<div class="input">
-					<span>±Ý¾×</span>
+					<span>ê¸ˆì•¡</span>
 					<input type="text" class="input_text id" name="price" value="${price}" readonly>
 				</div>
 				<input type="hidden" value="${logIn_id}" name="member_id">
-		    <input type="submit" value="¿¹¾àÇÏ±â" class="button">
+		    <input type="submit" value="ì˜ˆì•½í•˜ê¸°" class="button">
 			</section>
 		</form>
 	</div>	

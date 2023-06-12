@@ -41,3 +41,7 @@ section.calendar {
 
 .sat button {color: blue;}
 .sun button {color: red;}
+
+div#calendar td:hover button{
+	cursor: pointer;
+}

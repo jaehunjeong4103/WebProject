@@ -23,9 +23,7 @@ import service.RoomService;
 public class Reservation_controller extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
+		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		
 		String stay_name = request.getParameter("stay_name");
@@ -94,6 +92,7 @@ public class Reservation_controller extends HttpServlet{
 		String stay_name = "";
 		String room_name = "";
 		String member_name = "";
+		
 		int count = 0;
 		int price = 0;
 		
@@ -121,7 +120,6 @@ public class Reservation_controller extends HttpServlet{
 		if(price_ != null && !price_.equals("")) {
 			price = Integer.parseInt(price_);
 		}
-
 		
 		Reservation reservation = new Reservation();
 		reservation.setMember_id(member_id);

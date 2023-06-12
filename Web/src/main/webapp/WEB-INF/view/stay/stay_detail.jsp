@@ -200,12 +200,12 @@
 							</c:when>
 			        <c:otherwise>
 			        	<form action="/view/reservation/reservation" method="get">
-			        		<input type="hidden" id="weekend_count" name="weekend_count" value="">
-			        		<input type="hidden" id="weekday_count" name="weekday_count" value=""> 
+			        		<input type="hidden" class="weekend_count" name="weekend_count" value="">
+			        		<input type="hidden" class="weekday_count" name="weekday_count" value=""> 
 			        		<input type="hidden" name="stay_name" value="${stay.name}">
 			        		<input type="hidden" name="room_name" value="${r.name}">
-			        		<input type="hidden" id="check_in" name="check_in" value="" >
-			        		<input type="hidden" id="check_out" name="check_out" value="">
+			        		<input type="hidden" class="check_in" name="check_in" value="" >
+			        		<input type="hidden" class="check_out" name="check_out" value="">
 			        		<input type="submit" value="예약하기" id="res_button">
 			        	</form>
 			        	 
