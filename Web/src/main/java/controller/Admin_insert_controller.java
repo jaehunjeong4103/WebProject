@@ -140,7 +140,6 @@ public class Admin_insert_controller extends HttpServlet{
 				room.setWeekday_price(weekend_price);
 				room.setWeekday_price(weekday_price);
 				room.setOption(option);
-				room.setImage_path(image_path);
 				
 				RoomService room_service = new RoomService();
 				result = room_service.insertRoom(room);

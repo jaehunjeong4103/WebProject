@@ -10,15 +10,12 @@ public class Room {
 	private String weekend_price;
 	private String weekday_price;
 	private String option;
-	private String image_path;
-	private Date start_day;
-	private Date end_day;
 	
 	public Room() {
 	}
 
 	public Room(int id, String stay_name, String name, int max_person, String weekend_price, String weekday_price,
-			String option, String image_path, Date start_day, Date end_day) {
+			String option) {
 		super();
 		this.id = id;
 		this.stay_name = stay_name;
@@ -27,9 +24,6 @@ public class Room {
 		this.weekend_price = weekend_price;
 		this.weekday_price = weekday_price;
 		this.option = option;
-		this.image_path = image_path;
-		this.start_day = start_day;
-		this.end_day = end_day;
 	}
 
 	public int getId() {
@@ -88,38 +82,9 @@ public class Room {
 		this.option = option;
 	}
 
-	public String getImage_path() {
-		return image_path;
-	}
-
-	public void setImage_path(String image_path) {
-		this.image_path = image_path;
-	}
-
-	public Date getStart_day() {
-		return start_day;
-	}
-
-	public void setStart_day(Date start_day) {
-		this.start_day = start_day;
-	}
-
-	public Date getEnd_day() {
-		return end_day;
-	}
-
-	public void setEnd_day(Date end_day) {
-		this.end_day = end_day;
-	}
-
 	@Override
 	public String toString() {
 		return "Room [id=" + id + ", stay_name=" + stay_name + ", name=" + name + ", max_person=" + max_person
-				+ ", weekend_price=" + weekend_price + ", weekday_price=" + weekday_price + ", option=" + option
-				+ ", image_path=" + image_path + ", start_day=" + start_day + ", end_day=" + end_day + "]";
-	}
-
-	
-
-	
+				+ ", weekend_price=" + weekend_price + ", weekday_price=" + weekday_price + ", option=" + option + "]";
+	}	
 }

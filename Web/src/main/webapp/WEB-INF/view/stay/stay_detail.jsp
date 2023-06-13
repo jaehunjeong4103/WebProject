@@ -82,7 +82,7 @@
 		  			<c:set var="cod"/>
 		  		</div>
 		  		<!-- <div id="end_day">3박 4일</div> -->
-		  		<input type="submit" style="width: 50px; height: 28px; font-size: 18px; line-height: 28px;" value="검색">
+		  		<!-- <input type="submit" style="width: 50px; height: 28px; font-size: 18px; line-height: 28px;" value="검색"> -->
 		  	</div>
 
 	  	
