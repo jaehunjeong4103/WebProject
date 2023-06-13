@@ -17,7 +17,7 @@ public class RoomService {
 		int result = 0;
 		
 		String driverName="com.mysql.cj.jdbc.Driver";
-		String sql = "INSERT INTO room VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO room VALUES(null, ?, ?, ?, ?, ?, ?, ?, ?)";
 		String url = "jdbc:mysql://localhost:3306/yc";
 		
 		try {
@@ -30,7 +30,6 @@ public class RoomService {
 			pstmt.setString(4, room.getWeekend_price());
 			pstmt.setString(5, room.getWeekday_price());
 			pstmt.setString(6, room.getOption());
-			pstmt.setString(7, room.getImage_path());
 			pstmt.setDate(8,(java.sql.Date) room.getStart_day());
 			pstmt.setDate(9,(java.sql.Date) room.getStart_day());
 			result = pstmt.executeUpdate();
@@ -70,7 +69,6 @@ public class RoomService {
 				String weekend_price = rs.getString("weekend_price");
 				String weekday_price = rs.getString("weekday_price");
 				String option = rs.getString("option");
-				String image_path = rs.getString("image_path");
 				Date start_day = rs.getDate("start_day");
 				Date end_day = rs.getDate("end_day");
 				
@@ -82,7 +80,6 @@ public class RoomService {
 						weekend_price,
 						weekday_price,
 						option,
-						image_path,
 						start_day,
 						end_day
 						);
@@ -123,7 +120,6 @@ public class RoomService {
 				String weekend_price = rs.getString("weekend_price");
 				String weekday_price = rs.getString("weekday_price");
 				String option = rs.getString("option");
-				String image_path = rs.getString("image_path");
 				Date start_day = rs.getDate("start_day");
 				Date end_day = rs.getDate("end_day");
 				
@@ -135,7 +131,6 @@ public class RoomService {
 						weekend_price,
 						weekday_price,
 						option,
-						image_path,
 						start_day,
 						end_day
 						);
@@ -175,7 +170,6 @@ public class RoomService {
 				String weekend_price = rs.getString("weekend_price");
 				String weekday_price = rs.getString("weekday_price");
 				String option = rs.getString("option");
-				String image_path = rs.getString("image_path");
 				Date start_day = rs.getDate("start_day");
 				Date end_day = rs.getDate("end_day");
 				
@@ -187,7 +181,6 @@ public class RoomService {
 						weekend_price,
 						weekday_price,
 						option,
-						image_path,
 						start_day,
 						end_day
 						);

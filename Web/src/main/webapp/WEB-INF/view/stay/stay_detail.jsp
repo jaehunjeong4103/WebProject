@@ -82,7 +82,7 @@
 		  			<c:set var="cod"/>
 		  		</div>
 		  		<!-- <div id="end_day">3박 4일</div> -->
-		  		<input type="submit" style="width: 50px; height: 28px; font-size: 18px; line-height: 28px;" value="검색">
+		  		<!-- <input type="submit" style="width: 50px; height: 28px; font-size: 18px; line-height: 28px;" value="검색"> -->
 		  	</div>
 
 	  	
@@ -176,7 +176,7 @@
 			
 	  </div>
  
-	  <div id="room_box">
+	  <div id="room_box" style="display:none;">
 	  	<div id="room_list_head">
 				<div class="room_name">이름</div>
 				<div class="room_max">최대인원</div>
