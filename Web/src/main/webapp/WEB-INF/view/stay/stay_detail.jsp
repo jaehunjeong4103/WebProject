@@ -176,7 +176,7 @@
 			
 	  </div>
  
-	  <div id="room_box">
+	  <div id="room_box" style="display:none;">
 	  	<div id="room_list_head">
 				<div class="room_name">이름</div>
 				<div class="room_max">최대인원</div>

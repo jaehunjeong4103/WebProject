@@ -10,12 +10,21 @@ public class Room {
 	private String weekend_price;
 	private String weekday_price;
 	private String option;
+<<<<<<< HEAD
+=======
+	private Date start_day;
+	private Date end_day;
+>>>>>>> 40c60906ea8f5554777666d9de9afe21a40119e0
 	
 	public Room() {
 	}
 
 	public Room(int id, String stay_name, String name, int max_person, String weekend_price, String weekday_price,
+<<<<<<< HEAD
 			String option) {
+=======
+			String option, Date start_day, Date end_day) {
+>>>>>>> 40c60906ea8f5554777666d9de9afe21a40119e0
 		super();
 		this.id = id;
 		this.stay_name = stay_name;
@@ -24,6 +33,11 @@ public class Room {
 		this.weekend_price = weekend_price;
 		this.weekday_price = weekday_price;
 		this.option = option;
+<<<<<<< HEAD
+=======
+		this.start_day = start_day;
+		this.end_day = end_day;
+>>>>>>> 40c60906ea8f5554777666d9de9afe21a40119e0
 	}
 
 	public int getId() {
@@ -82,9 +96,38 @@ public class Room {
 		this.option = option;
 	}
 
+<<<<<<< HEAD
 	@Override
 	public String toString() {
 		return "Room [id=" + id + ", stay_name=" + stay_name + ", name=" + name + ", max_person=" + max_person
 				+ ", weekend_price=" + weekend_price + ", weekday_price=" + weekday_price + ", option=" + option + "]";
 	}	
+=======
+	public Date getStart_day() {
+		return start_day;
+	}
+
+	public void setStart_day(Date start_day) {
+		this.start_day = start_day;
+	}
+
+	public Date getEnd_day() {
+		return end_day;
+	}
+
+	public void setEnd_day(Date end_day) {
+		this.end_day = end_day;
+	}
+
+	@Override
+	public String toString() {
+		return "Room [id=" + id + ", stay_name=" + stay_name + ", name=" + name + ", max_person=" + max_person
+				+ ", weekend_price=" + weekend_price + ", weekday_price=" + weekday_price + ", option=" + option
+				+ ", start_day=" + start_day + ", end_day=" + end_day + "]";
+	}
+
+	
+
+	
+>>>>>>> 40c60906ea8f5554777666d9de9afe21a40119e0
 }
